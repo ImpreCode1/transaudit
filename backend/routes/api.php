@@ -1,12 +1,17 @@
 <?php
 
+use App\Http\Controllers\API\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Define tus rutas de API aquí
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth:sanctum');
+
+
+// Route::get('/test', [TestController::class, 'test']);
+Route::get('/students', function () {
+    return 'Hello Students';
 });
 
-// Ejemplo de ruta para un controlador de API
-Route::get('/example', 'ExampleController@index');
+
