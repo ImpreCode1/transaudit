@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/test', [TestController::class, 'test']);
+
+
 Route::get('/students', function () {
-    return 'Hello Students';
+    return response()->json(['message' => 'Hola conectado api con react!']);
 });
-
-

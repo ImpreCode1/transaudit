@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.4
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -40,19 +23,19 @@ const AdminNavbar = () => {
               src={require("../../assets/img/brand/argon-react-white.png")}
             />
           </NavbarBrand>
-          <button className="navbar-toggler" id="navbar-collapse-main">
+          {/* <button className="navbar-toggler" id="navbar-collapse-main">
             <span className="navbar-toggler-icon" />
-          </button>
+          </button> */}
           <UncontrolledCollapse navbar toggler="#navbar-collapse-main">
             <div className="navbar-collapse-header d-md-none">
               <Row>
                 <Col className="collapse-brand" xs="6">
-                  <Link to="/">
+                  {/* <Link to="/">
                     <img
                       alt="..."
                       src={require("../../assets/img/brand/argon-react.png")}
                     />
-                  </Link>
+                  </Link> */}
                 </Col>
                 <Col className="collapse-close" xs="6">
                   <button className="navbar-toggler" id="navbar-collapse-main">
