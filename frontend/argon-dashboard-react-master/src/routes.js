@@ -10,6 +10,9 @@ import RegistrarVia from "views/examples/RegistrarVia.js";
 import Historial from "views/examples/Historial";
 import CargarReportes from "views/examples/CargarReportes";
 import Reportes from "views/examples/Reportes";
+
+
+
 var routes = [
   {
     path: "/index",

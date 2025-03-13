@@ -88,6 +88,56 @@ const Sidebar = (props) => {
     >
       <Container fluid>
         {/* Toggler */}
+
+        <div className="sidebar-header text-center py-4" style={{ 
+          background: "linear-gradient(150deg, #0063cc, #5e17eb)",
+          borderRadius: "0px 0px 25px 25px",
+          boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+          position: "relative",
+          overflow: "hidden"
+        }}>
+        {/* Elementos decorativos */}
+        <div className="position-absolute" style={{ 
+        top: "5px", 
+        left: "10px", 
+        width: "40px", 
+        height: "40px", 
+        background: "rgba(255,255,255,0.1)", 
+        borderRadius: "50%",
+        zIndex: 0 
+        }}></div>
+    <div className="position-absolute" style={{ 
+      bottom: "15px", 
+      right: "15px", 
+      width: "60px", 
+      height: "60px", 
+      background: "rgba(255,255,255,0.07)", 
+      borderRadius: "50%",
+      zIndex: 0 
+    }}></div>
+  
+  <div className="position-relative" style={{ zIndex: 1 }}>
+    <h4 className="text-white font-weight-bold mb-1" style={{ 
+      fontSize: "24px", 
+      letterSpacing: "-0.5px",
+      textShadow: "0 2px 4px rgba(0,0,0,0.2)" 
+    }}>
+      <i className="fas fa-bus-alt mr-2"></i>TransAudit
+    </h4>
+    <div className="d-flex justify-content-center align-items-center">
+      <div className="bg-white" style={{ height: "2px", width: "30px", opacity: "0.3", borderRadius: "2px" }}></div>
+      <p className="text-white mx-2 mb-0" style={{ 
+        fontSize: "13px", 
+        opacity: "0.9",
+        fontWeight: "300",
+        letterSpacing: "1px",
+        textTransform: "uppercase" 
+      }}>Menú Principal</p>
+      <div className="bg-white" style={{ height: "2px", width: "30px", opacity: "0.3", borderRadius: "2px" }}></div>
+    </div>
+  </div>
+</div>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -96,71 +146,7 @@ const Sidebar = (props) => {
           <span className="navbar-toggler-icon" />
         </button>
         {/* Brand */}
-        {logo ? (
-          <NavbarBrand className="pt-0" {...navbarBrandProps}>
-            <img
-              alt={logo.imgAlt}
-              className="navbar-brand-img"
-              src={logo.imgSrc}
-            />
-          </NavbarBrand>
-        ) : null}
-        {/* User */}
-        <Nav className="align-items-center d-md-none">
-          <UncontrolledDropdown nav>
-            <DropdownToggle nav className="nav-link-icon">
-              <i className="ni ni-bell-55" />
-            </DropdownToggle>
-            <DropdownMenu
-              aria-labelledby="navbar-default_dropdown_1"
-              className="dropdown-menu-arrow"
-              right
-            >
-              <DropdownItem>Action</DropdownItem>
-              <DropdownItem>Another action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Something else here</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
-          <UncontrolledDropdown nav>
-            <DropdownToggle nav>
-              <Media className="align-items-center">
-                <span className="avatar avatar-sm rounded-circle">
-                  <img
-                    alt="..."
-                    src={require("../../assets/img/theme/team-1-800x800.jpg")}
-                  />
-                </span>
-              </Media>
-            </DropdownToggle>
-            <DropdownMenu className="dropdown-menu-arrow" right>
-              <DropdownItem className="noti-title" header tag="div">
-                <h6 className="text-overflow m-0">Welcome!</h6>
-              </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
-                <i className="ni ni-single-02" />
-                <span>My profile</span>
-              </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
-                <i className="ni ni-settings-gear-65" />
-                <span>Settings</span>
-              </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
-                <i className="ni ni-calendar-grid-58" />
-                <span>Activity</span>
-              </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
-                <i className="ni ni-support-16" />
-                <span>Support</span>
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                <i className="ni ni-user-run" />
-                <span>Logout</span>
-              </DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
-        </Nav>
+  
         {/* Collapse */}
         <Collapse navbar isOpen={collapseOpen}>
           {/* Collapse header */}
@@ -192,7 +178,7 @@ const Sidebar = (props) => {
             </Row>
           </div>
           {/* Form */}
-          <Form className="mt-4 mb-3 d-md-none">
+          {/* <Form className="mt-4 mb-3 d-md-none">
             <InputGroup className="input-group-rounded input-group-merge">
               <Input
                 aria-label="Search"
@@ -206,7 +192,7 @@ const Sidebar = (props) => {
                 </InputGroupText>
               </InputGroupAddon>
             </InputGroup>
-          </Form>
+          </Form> */}
           {/* Navigation */}
           <Nav navbar>{createLinks(routes)}</Nav>
           {/* Divider */}
