@@ -362,12 +362,12 @@ const Historial = () => {
           <Button color="info" size="sm" className="mr-1">
             <i className="fas fa-eye"></i>
           </Button>
-          <Button color="warning" size="sm" className="mr-1">
+          {/* <Button color="warning" size="sm" className="mr-1">
             <i className="fas fa-edit"></i>
           </Button>
           <Button color="danger" size="sm">
             <i className="fas fa-trash"></i>
-          </Button>
+          </Button> */}
         </div>
       ),
     },
